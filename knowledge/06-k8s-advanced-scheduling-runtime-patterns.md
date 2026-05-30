@@ -1,7 +1,5 @@
 # Kubernetes Advanced Scheduling and Runtime Patterns (Stage 6)
 
-## Why this name?
-You asked for a better topic name. Instead of only “Advanced Workload Patterns”, this guide is named:
 
 **Advanced Scheduling and Runtime Patterns**
 
