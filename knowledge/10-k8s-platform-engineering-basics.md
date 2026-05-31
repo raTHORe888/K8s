@@ -1,5 +1,25 @@
 # Kubernetes Platform Engineering Basics (Stage 9)
 
+## What is it?
+Platform engineering in Kubernetes is the practice of creating reusable internal platform capabilities (templates, guardrails, automation) so product teams can ship safely and quickly.
+
+## What is it used for?
+- Golden paths and self-service deployment workflows
+- Standardized Helm/app blueprints
+- Policy and governance at scale with better developer experience
+
+## Why is it important?
+Without a platform approach, teams duplicate effort and delivery quality becomes inconsistent.
+
+## Workflow
+```mermaid
+flowchart TD
+    PAIN[Identify repeated delivery pain points] --> GOLDEN[Create golden path templates]
+    GOLDEN --> GUARDRAILS[Add policy/security defaults]
+    GUARDRAILS --> SELF[Enable self-service onboarding]
+    SELF --> ITERATE[Measure outcomes and iterate]
+```
+
 ## Topics Covered
 55. Why platform engineering in Kubernetes
 56. Golden paths and internal developer platform (IDP)

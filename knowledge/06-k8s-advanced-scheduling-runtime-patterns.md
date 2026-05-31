@@ -1,5 +1,25 @@
 # Kubernetes Advanced Scheduling and Runtime Patterns (Stage 6)
 
+## What is it?
+This chapter covers advanced controls for where pods run and how they behave at runtime, including affinity rules, priorities, disruption budgets, init containers, and sidecars.
+
+## What is it used for?
+- Placement control for performance and resilience
+- Safer maintenance and voluntary disruption handling
+- Structured startup/runtime behavior for complex applications
+
+## Why is it important?
+Advanced scheduling and runtime patterns prevent resource contention, improve availability, and support predictable operations.
+
+## Workflow
+```mermaid
+flowchart TD
+  REQUIREMENTS[Define placement/runtime needs] --> PLACEMENT[Apply taints/affinity/priority]
+  PLACEMENT --> AVAILABILITY[Add PDB safeguards]
+  AVAILABILITY --> RUNTIME[Use init and sidecar patterns]
+  RUNTIME --> VERIFY[Validate scheduling and behavior]
+```
+
 
 **Advanced Scheduling and Runtime Patterns**
 

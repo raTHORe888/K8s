@@ -1,5 +1,25 @@
 # Kubernetes Core Workloads
 
+## What is it?
+Core workloads are Kubernetes controllers and resources used to run applications reliably: `Deployment`, `StatefulSet`, `DaemonSet`, `Job`, and autoscalers.
+
+## What is it used for?
+- Running stateless and stateful services
+- Managing rollouts, restarts, and replica counts
+- Executing one-time and scheduled tasks
+
+## Why is it important?
+Choosing the right workload controller is critical for reliability, scaling, and correct runtime behavior.
+
+## Workflow
+```mermaid
+flowchart TD
+  APP[Classify application type] --> CHOOSE[Choose controller type]
+  CHOOSE --> DEPLOY[Deploy and configure replicas]
+  DEPLOY --> SCALE[Attach autoscaling strategy]
+  SCALE --> OPERATE[Operate with rollout/rollback safety]
+```
+
 ## Topics Covered
 8. ReplicaSets
 9. Deployments

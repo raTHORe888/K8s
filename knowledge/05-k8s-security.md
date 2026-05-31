@@ -1,5 +1,25 @@
 # Kubernetes Security (Stage 5)
 
+## What is it?
+Kubernetes security is a layered model that includes identity, authorization, admission control, network isolation, and secret protection.
+
+## What is it used for?
+- Enforcing least privilege for users and workloads
+- Reducing workload attack surface
+- Protecting secrets and service-to-service communication
+
+## Why is it important?
+A single weak layer can compromise cluster security; defense-in-depth is required for production.
+
+## Workflow
+```mermaid
+flowchart TD
+  ID[Define identities] --> RBAC[Apply RBAC least privilege]
+  RBAC --> ADMISSION[Enforce pod/admission policies]
+  ADMISSION --> NETWORK[Restrict traffic with NetworkPolicy]
+  NETWORK --> SECRETS[Secure secrets and audit controls]
+```
+
 ## Topics Covered
 26. Service Accounts
 27. RBAC in Kubernetes

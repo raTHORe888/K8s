@@ -1,5 +1,26 @@
 # Kubernetes Troubleshooting Drills (Stage 10)
 
+## What is it?
+Kubernetes troubleshooting drills are structured incident practice scenarios that build repeatable diagnosis and remediation skills.
+
+## What is it used for?
+- Training engineers to triage failures quickly
+- Building reliable runbooks for common incident classes
+- Improving MTTR through practice and evidence-based debugging
+
+## Why is it important?
+Incident response quality depends on practice; drills reduce guesswork during real outages.
+
+## Workflow
+```mermaid
+flowchart TD
+    SCENARIO[Choose incident scenario] --> TRIAGE[Collect evidence fast]
+    TRIAGE --> RCA[Identify probable root cause]
+    RCA --> FIX[Apply minimal safe fix]
+    FIX --> VERIFY[Validate recovery]
+    VERIFY --> LEARN[Document prevention action]
+```
+
 ## Topics Covered
 61. Incident-first troubleshooting mindset
 62. Fast triage workflow (the 5-minute method)

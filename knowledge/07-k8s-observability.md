@@ -1,5 +1,25 @@
 # Kubernetes Observability (Stage 6)
 
+## What is it?
+Kubernetes observability is the practice of collecting and correlating logs, metrics, events, and health signals to operate workloads reliably.
+
+## What is it used for?
+- Early detection of incidents
+- Fast troubleshooting and root-cause analysis
+- Monitoring service and platform health over time
+
+## Why is it important?
+Without observability, failures are detected late and recovery time increases.
+
+## Workflow
+```mermaid
+flowchart TD
+  SIGNALS[Collect logs/metrics/events] --> DASH[Build dashboards]
+  DASH --> ALERT[Create actionable alerts]
+  ALERT --> DEBUG[Run debug playbooks]
+  DEBUG --> IMPROVE[Improve probes and instrumentation]
+```
+
 ## Topics Covered
 32. Logging architecture
 33. Metrics with Prometheus

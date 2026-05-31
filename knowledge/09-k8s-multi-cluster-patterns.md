@@ -1,5 +1,25 @@
 # Kubernetes Multi-Cluster Patterns (Stage 8)
 
+## What is it?
+Multi-cluster patterns describe how multiple Kubernetes clusters are organized and operated for resilience, isolation, and global delivery.
+
+## What is it used for?
+- Regional failover and disaster recovery
+- Isolation by environment/team/compliance boundary
+- Global traffic routing for latency and availability
+
+## Why is it important?
+A single cluster can become a single point of failure for large-scale systems.
+
+## Workflow
+```mermaid
+flowchart TD
+    GOALS[Define resilience and latency goals] --> FLEET[Design fleet model]
+    FLEET --> TRAFFIC[Define global routing/failover]
+    TRAFFIC --> DATA[Align data replication strategy]
+    DATA --> DRILLS[Run failover drills and improve]
+```
+
 ## Topics Covered
 49. Why multi-cluster
 50. Fleet management model

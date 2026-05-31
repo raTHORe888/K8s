@@ -1,5 +1,25 @@
 # Kubernetes Networking (Stage 3)
 
+## What is it?
+Kubernetes networking defines how pods and services communicate inside the cluster and how external traffic reaches workloads.
+
+## What is it used for?
+- Service discovery and stable service endpoints
+- Exposing apps with Ingress controllers
+- Enforcing traffic boundaries with NetworkPolicy and CNI behavior
+
+## Why is it important?
+Networking issues are a common source of outages; correct service and policy design is essential for stable systems.
+
+## Workflow
+```mermaid
+flowchart TD
+  PODS[Create workloads] --> SERVICE[Expose with Service]
+  SERVICE --> DNS[Verify DNS discovery]
+  DNS --> INGRESS[Configure external ingress]
+  INGRESS --> POLICY[Apply NetworkPolicy controls]
+```
+
 ## Topics Covered
 15. Services
 16. DNS in Kubernetes

@@ -1,5 +1,25 @@
 # Kubernetes Service Mesh (Istio and Linkerd) (Stage 7)
 
+## What is it?
+A service mesh is an infrastructure layer for service-to-service communication that provides policy, security, and traffic management without embedding all logic in each application.
+
+## What is it used for?
+- mTLS between services
+- Consistent retries/timeouts and traffic splitting
+- Better service-level telemetry and governance
+
+## Why is it important?
+It standardizes cross-cutting communication concerns and reduces application-level networking complexity.
+
+## Workflow
+```mermaid
+flowchart TD
+  NEED[Identify microservice communication pain points] --> CHOOSE[Choose mesh approach]
+  CHOOSE --> PILOT[Pilot in one namespace]
+  PILOT --> POLICY[Apply security and traffic policy]
+  POLICY --> EXPAND[Expand with observability validation]
+```
+
 ## Topics Covered
 43. What a service mesh solves
 44. Data plane vs control plane

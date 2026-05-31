@@ -1,5 +1,25 @@
 # Kubernetes Foundations
 
+## What is it?
+Kubernetes foundations cover the core concepts of the Kubernetes platform: cluster architecture, API-driven desired state, and primary objects like Pods, Namespaces, Labels, and Annotations.
+
+## What is it used for?
+- Learning how Kubernetes manages containerized workloads
+- Understanding control plane and worker node responsibilities
+- Building a strong base before workloads, networking, and security topics
+
+## Why is it important?
+Without strong fundamentals, advanced topics become confusing and operational decisions become risky.
+
+## Workflow
+```mermaid
+flowchart TD
+  LEARN[Learn core concepts] --> MODEL[Understand desired-state model]
+  MODEL --> OBJECTS[Practice core objects: Pod/Namespace/Label]
+  OBJECTS --> TOOLING[Use kubectl to inspect/apply state]
+  TOOLING --> READY[Ready for advanced Kubernetes topics]
+```
+
 ## Topics Covered
 1. What is Kubernetes?
 2. Architecture Overview

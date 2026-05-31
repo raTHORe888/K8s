@@ -1,5 +1,25 @@
 # Kubernetes Configuration and Storage (Stage 4)
 
+## What is it?
+This topic covers how Kubernetes handles runtime configuration and persistent data using `ConfigMap`, `Secret`, volumes, `PV/PVC`, and `StorageClass`.
+
+## What is it used for?
+- Externalizing app config from container images
+- Handling sensitive data with safer patterns
+- Persisting state across pod restarts and rescheduling
+
+## Why is it important?
+Mismanaged config or storage causes downtime, security exposure, and data loss risks.
+
+## Workflow
+```mermaid
+flowchart TD
+  CONFIG[Define config and secret boundaries] --> MOUNT[Inject via env/volumes]
+  MOUNT --> STORAGE[Provision PV/PVC and StorageClass]
+  STORAGE --> LIMITS[Set resource requests/limits]
+  LIMITS --> VALIDATE[Test restart and data persistence]
+```
+
 ## Topics Covered
 20. ConfigMaps
 21. Secrets
